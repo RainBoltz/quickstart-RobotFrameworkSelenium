@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.9 on win32)" generated="20201106 17:44:06.858" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\kevin_nzxt\Desktop\PHILIP\codes\quickstart-RobotFrameworkSelenium\Assignment3\test.robot">
+<test id="s1-t1" name="Print Fibonacci from Index">
+<kw name="Print the #23 Fibonacci number.">
+<kw name="Get Fibonacci Number" library="myFib">
+<arguments>
+<arg>${n}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20201106 17:44:06.892" level="INFO">${output} = 28657</msg>
+<status status="PASS" starttime="20201106 17:44:06.882" endtime="20201106 17:44:06.892"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<status status="PASS" starttime="20201106 17:44:06.892" endtime="20201106 17:44:06.892"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:44:06.882" endtime="20201106 17:44:06.892"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:44:06.881" endtime="20201106 17:44:06.893" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201106 17:44:06.859" endtime="20201106 17:44:06.894"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
