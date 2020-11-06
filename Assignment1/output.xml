@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.9 on win32)" generated="20201106 15:01:52.044" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\kevin_nzxt\Desktop\PHILIP\codes\quickstart-RobotFrameworkSelenium\Assignment1\test.robot">
+<test id="s1-t1" name="This is the test case name">
+<kw name="Step 1 here">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>step 1!</arg>
+</arguments>
+<status status="PASS" starttime="20201106 15:01:52.065" endtime="20201106 15:01:52.066"></status>
+</kw>
+<status status="PASS" starttime="20201106 15:01:52.065" endtime="20201106 15:01:52.066"></status>
+</kw>
+<kw name="Step 2 here">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>step 2!</arg>
+</arguments>
+<status status="PASS" starttime="20201106 15:01:52.066" endtime="20201106 15:01:52.067"></status>
+</kw>
+<status status="PASS" starttime="20201106 15:01:52.066" endtime="20201106 15:01:52.067"></status>
+</kw>
+<status status="PASS" starttime="20201106 15:01:52.064" endtime="20201106 15:01:52.067" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201106 15:01:52.045" endtime="20201106 15:01:52.068"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
