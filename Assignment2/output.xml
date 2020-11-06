@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.9 on win32)" generated="20201106 17:31:04.139" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\kevin_nzxt\Desktop\PHILIP\codes\quickstart-RobotFrameworkSelenium\Assignment2\test.robot">
+<test id="s1-t1" name="Check wiki search">
+<kw name="Given you are on Wikipedia home page:">
+<arguments>
+<arg>https://en.wikipedia.org/wiki/Main_Page</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=headlesschrome</arg>
+</arguments>
+<msg timestamp="20201106 17:31:04.284" level="INFO">Opening browser 'headlesschrome' to base url 'https://en.wikipedia.org/wiki/Main_Page'.</msg>
+<status status="PASS" starttime="20201106 17:31:04.283" endtime="20201106 17:31:08.340"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:04.283" endtime="20201106 17:31:08.341"></status>
+</kw>
+<kw name="When type coronavirus into the search box">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:searchInput</arg>
+<arg>coronavirus</arg>
+</arguments>
+<msg timestamp="20201106 17:31:08.341" level="INFO">Typing text 'coronavirus' into text field 'id:searchInput'.</msg>
+<status status="PASS" starttime="20201106 17:31:08.341" endtime="20201106 17:31:08.411"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:08.341" endtime="20201106 17:31:08.411"></status>
+</kw>
+<kw name="And hit enter key">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20201106 17:31:08.413" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20201106 17:31:08.413" level="INFO">Pressing special key RETURN to browser.</msg>
+<msg timestamp="20201106 17:31:08.413" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20201106 17:31:08.412" endtime="20201106 17:31:09.856"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:08.412" endtime="20201106 17:31:09.857"></status>
+</kw>
+<kw name="And choose the first result">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@title="Coronavirus"]</arg>
+</arguments>
+<assign>
+<var>${elements}</var>
+</assign>
+<msg timestamp="20201106 17:31:09.871" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="137912f0a0efa12726cd555191b7e6ac", element="9a8cebe7-5177-41fe-850d-e6492c2e130b")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20201106 17:31:09.857" endtime="20201106 17:31:09.871"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${elements}[0]</arg>
+</arguments>
+<msg timestamp="20201106 17:31:09.872" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="137912f0a0efa12726cd555191b7e6ac", element="9a8cebe7-5177-41fe-850d-e6492c2e130b")&gt;'.</msg>
+<status status="PASS" starttime="20201106 17:31:09.871" endtime="20201106 17:31:10.228"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:09.857" endtime="20201106 17:31:10.228"></status>
+</kw>
+<kw name="Then you will be taken to:">
+<arguments>
+<arg>https://en.wikipedia.org/wiki/Coronavirus</arg>
+</arguments>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20201106 17:31:10.264" level="INFO">Current location is 'https://en.wikipedia.org/wiki/Coronavirus'.</msg>
+<status status="PASS" starttime="20201106 17:31:10.229" endtime="20201106 17:31:10.264"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:10.229" endtime="20201106 17:31:10.264"></status>
+</kw>
+<kw name="And you will see &quot;Coronavirus disease 2019 (COVID-19)&quot; section in the page">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id:Coronavirus_disease_2019_(COVID-19)</arg>
+<arg>${txt}</arg>
+</arguments>
+<msg timestamp="20201106 17:31:10.265" level="INFO">Verifying element 'id:Coronavirus_disease_2019_(COVID-19)' contains exact text 'Coronavirus disease 2019 (COVID-19)'.</msg>
+<status status="PASS" starttime="20201106 17:31:10.265" endtime="20201106 17:31:10.331"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:10.265" endtime="20201106 17:31:10.331"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201106 17:31:10.331" endtime="20201106 17:31:12.374"></status>
+</kw>
+<status status="PASS" starttime="20201106 17:31:04.283" endtime="20201106 17:31:12.374" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201106 17:31:04.141" endtime="20201106 17:31:12.376"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
